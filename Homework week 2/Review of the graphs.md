@@ -2,49 +2,171 @@
 
 ## Graph 1 
 
-![Screenshot 2023-10-18 225257](https://github.com/hadzinikolicmasa/SMPE/assets/82235575/18116a7e-b7df-4f9a-a65d-1b4453768667)
+![1](https://github.com/hadzinikolicmasa/SMPE/assets/82235575/a46416fb-e980-4d62-a358-f774de73c585)
+
+
 
 ### Data
-- [ ] Type of graphic adapted
-- [ ] Interpolation make sens
-- [ ] Sufficient number of points
-- [ ] Building method clear
-- [ ] Confidence intervals visualized
-- [ ] Appropriate steps for histograms
-- [ ] Histograms visualize probabilities
+- [X] The type of the graphic is adapted to the nature of data (curve, bars, pie, histogram, cloud...) ;
+- [X] Approximations/interpolation make sense ;
+- [X] Curves are defined by a sufficient number of points ;
+- [X] The building method of the curve is clear: interpolation (linear, polynomial, regression...) ;
+- [ ] Confidence intervals are visualized (or given separately) ;
+- [ ] Steps of histograms are adequate ;
+- [ ] Histograms visualize probabilities (from 0 to 1).
 
 ### Graphical objects
-- [ ] Graphical objects are readable on any support
-- [ ] Standard color range
-- [ ] Axis identified and labelled
-- [ ] Scales units are explicit
-- [ ] No ambiguity when curves cross
-- [ ] Grid helps reading
+- [X] Graphical objects are readable on screen, on printed version (B/W), on video... ;
+- [X] Graphic range is standard, without too similar colors, without green (video) ;
+- [ ] Graphical axis are well identified and labeled;
+- [ ] Scales and units are explicit ;
+- [X] Curves cross without ambiguity ;
+- [ ] Grids help the reader.
 
 ### Annotation
-- [ ] Axis are labelled by quantities
-- [ ] Labels of the axis are clear, and self contained
-- [ ] Units are indicated on the axis
-- [ ] Axes are oriented fron bottom-left to top-right
-- [ ] Origin should be (0,0), if not it should be clearly justified
-- [ ] No Hole on the axes
-- [ ] the order's of graph/histogram bar is based on classical ordering 
-- [ ] Curves and Bar has legend
+- [X] Axis are labeled by quantities ;
+- [X] Labels of the axis are clear and self-contained;
+- [ ] Units are indicated on the axis ;
+- [ ] Axes are oriented from the left to the right and from the bottom to the top ;
+- [ ] Origin should be (0,0), if not it should be clearly justified ;
+- [X] No Hole on the axes
+- [ ] For bar graphs/histograms order of bars is based on classical ordering (alphabetical, temporal, from the best to the worst) are better than a random order ;
+- [ ] The order of the graph/histogram bar is based on classical ordering 
+- [ ] Each curve has a legend ;
+- [ ] Each bar has a legend ;
 
 ### Information
-- [ ] Curves on the same scale
-- [ ] Less than 6 curves
-- [ ] Compare curves on same graphics
-- [ ] A curve cannot be removed without reducing infos
-- [ ] The graphic gives relevant infos
-- [ ] If showing average, don't forger the error bars
-- [ ] It is not possible to remove object without altering readability
+- [X] Curves on the same scale
+- [X] The number of curves on the same graph is small (less than 6) ;
+- [X] Compare curves on the same graphic ;
+- [X] A curve cannot be removed without reducing the information ;
+- [X] The graphic gives a relevant information to the reader ;
+- [ ] If the vertical axis shows averages, it should indicate error bars ;
+- [X] It is not possible to remove any object without modifying the readability of the graphic.
 
 ### Context
-- [ ] All symbols used are defined and references
-- [ ] The graphics is the most appropriate representation for the data
-- [ ] The graphic has a title
-- [ ] The title is meaningful and self contained
-- [ ] The graphic is referenced in text
-- [ ] The text comment the figure
+- [X] All the symbols are defined and referenced in the text ;
+- [X] The graphic produces more information than any other representation (choice of the variable) ;
+- [X] The graphic has a title ;
+- [X] The title is sufficiently self-contained to partially understand the graphic ;
+- [X] The graphic is referenced in the text ;
+- [ ] The text comments the figure.
+
+  #### Last but not least: [X] The graphical representation should be elegant 
+
+#### Comment: Although the message of the graph is clearly highlighted visually with an upper part that represents blood flowing down, it may be confusing for readers to read the graph's values because the y-axis is reversed.
+
+
+## Graph 2 
+
+![222](https://github.com/hadzinikolicmasa/SMPE/assets/82235575/ca1768c3-7e6e-40ed-8139-89cfedfd6891)
+
+
+
+### Data
+- [X] The type of the graphic is adapted to the nature of data (curve, bars, pie, histogram, cloud...) ;
+- [X] Approximations/interpolation make sense ;
+- [X] Curves are defined by a sufficient number of points ;
+- [X] The building method of the curve is clear: interpolation (linear, polynomial, regression...) ;
+- [X] Confidence intervals are visualized (or given separately) ;
+- [ ] Steps of histograms are adequate ;
+- [ ] Histograms visualize probabilities (from 0 to 1).
+
+### Graphical objects
+- [X] Graphical objects are readable on screen, on printed version (B/W), on video... ;
+- [X] Graphic range is standard, without too similar colors, without green (video) ;
+- [ ] Graphical axis are well identified and labeled;
+- [ ] Scales and units are explicit ;
+- [X] Curves cross without ambiguity ;
+- [X] Grids help the reader.
+
+### Annotation
+- [X] Axis are labeled by quantities ;
+- [X] Labels of the axis are clear and self-contained;
+- [ ] Units are indicated on the axis ;
+- [X] Axes are oriented from the left to the right and from the bottom to the top ;
+- [X] Origin should be (0,0), if not it should be clearly justified ;
+- [X] No Hole on the axes
+- [ ] For bar graphs/histograms order of bars is based on classical ordering (alphabetical, temporal, from the best to the worst) are better than a random order ;
+- [ ] The order of the graph/histogram bar is based on classical ordering 
+- [X] Each curve has a legend ;
+- [ ] Each bar has a legend ;
+
+### Information
+- [X] Curves on the same scale
+- [X] The number of curves on the same graph is small (less than 6) ;
+- [X] Compare curves on the same graphic ;
+- [X] A curve cannot be removed without reducing the information ;
+- [X] The graphic gives a relevant information to the reader ;
+- [ ] If the vertical axis shows averages, it should indicate error bars ;
+- [X] It is not possible to remove any object without modifying the readability of the graphic.
+
+### Context
+- [ ] All the symbols are defined and referenced in the text ;
+- [ ] The graphic produces more information than any other representation (choice of the variable) ;
+- [X] The graphic has a title ;
+- [ ] The title is sufficiently self-contained to partially understand the graphic ;
+- [ ] The graphic is referenced in the text ;
+- [ ] The text comments the figure.
+
+  #### Last but not least: [X] The graphical representation should be elegant 
+
+#### Comment: There should be labels for both of the axis (y-axis : number of sales, x-axis : year). The title should explain the graph more precisely like : Total brand sales of different car brands over years. There should also be a source of the graph mentioned.
+
+
+## Graph 3 
+
+![Screenshot 2023-10-19 004616](https://github.com/hadzinikolicmasa/SMPE/assets/82235575/b57bde0c-950f-4972-b500-f879f9d0790a)
+
+
+
+### Data
+- [X] The type of the graphic is adapted to the nature of data (curve, bars, pie, histogram, cloud...) ;
+- [X] Approximations/interpolation make sense ;
+- [X] Curves are defined by a sufficient number of points ;
+- [X] The building method of the curve is clear: interpolation (linear, polynomial, regression...) ;
+- [X] Confidence intervals are visualized (or given separately) ;
+- [ ] Steps of histograms are adequate ;
+- [ ] Histograms visualize probabilities (from 0 to 1).
+
+### Graphical objects
+- [ ] Graphical objects are readable on screen, on printed version (B/W), on video... ;
+- [X] Graphic range is standard, without too similar colors, without green (video) ;
+- [X] Graphical axis are well-identified and labeled;
+- [X] Scales and units are explicit ;
+- [ ] Curves cross without ambiguity ;
+- [X] Grids help the reader.
+
+### Annotation
+- [X] Axis are labeled by quantities ;
+- [X] Labels of the axis are clear and self-contained;
+- [ ] Units are indicated on the axis ;
+- [X] Axes are oriented from the left to the right and from the bottom to the top ;
+- [ ] Origin should be (0,0), if not it should be clearly justified ;
+- [X] No Hole on the axes
+- [ ] For bar graphs/histograms order of bars is based on classical ordering (alphabetical, temporal, from the best to the worst) are better than a random order ;
+- [ ] The order of the graph/histogram bar is based on classical ordering 
+- [X] Each curve has a legend ;
+- [ ] Each bar has a legend ;
+
+### Information
+- [X] Curves on the same scale
+- [X] The number of curves on the same graph is small (less than 6) ;
+- [X] Compare curves on the same graphic ;
+- [X] A curve cannot be removed without reducing the information ;
+- [X] The graphic gives a relevant information to the reader ;
+- [ ] If the vertical axis shows averages, it should indicate error bars ;
+- [X] It is not possible to remove any object without modifying the readability of the graphic.
+
+### Context
+- [ ] All the symbols are defined and referenced in the text ;
+- [ ] The graphic produces more information than any other representation (choice of the variable) ;
+- [X] The graphic has a title ;
+- [ ] The title is sufficiently self-contained to partially understand the graphic ;
+- [ ] The graphic is referenced in the text ;
+- [X] The text comments the figure.
+
+  #### Last but not least: [ ] The graphical representation should be elegant 
+
+#### Comment: Even though this graphic has a lot of good points, it can be improved in some ways. There are too many points on the x-axis and y-axis, it would be better to increase the step between values on the axes to reduce the density and make the graph more readable. The title exists but it describes the graph as a "monthly" representation while on the x-axis we have years. Since it is a scientific graph, a reference should be mentioned. 
 
