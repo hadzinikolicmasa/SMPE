@@ -1,0 +1,4 @@
+# MOOC : Module 2 Exercise 5
+## Challenger
+
+I think that the dataset is too small to come to any conclusion from it, so the graphical representation and approximations later in the text do not give good results because of that. Also, I don't think we should remove the rows where the malfunction is 0 because that data can also help us in the analysis. Given that the take-off temperature is 31, w we hould definitely include tests that have an approximate or same temperature. Also, most of the rows have a pressure of 200 and from the dataset itself we can conclude that it cannot help us much, but it is necessary to add more rows with different pressure values in order to examine whether another factor affects the correctness of the rings. Anyway, I think the problem is in a bad and small dataset and pre-processing that is not well done.
