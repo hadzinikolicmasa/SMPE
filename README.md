@@ -16,12 +16,12 @@
       Applying the checklist for good graphics;
       Proposing a better representation (hand-drawing is fine) that passes the checklist.
 - [X] Report this work for at least 3 figures on you github/gitlab project.
-- [ ] MOOC: Complete exercise 5 of module 2 (Challenger). Write a short text explaining what is good and wrong about this document (you may want to provide an updated version of the notebook) and upload on your github/gitlab space.
+- [X] MOOC: Complete exercise 5 of module 2 (Challenger). Write a short text explaining what is good and wrong about this document (you may want to provide an updated version of the notebook) and upload on your github/gitlab space.
 
 # Third week 
 
 - [ ] Use good naming and organization conventions in your repos.
-- [ ] Complete the Challenger exercise if you haven’t done so.
+- [X] Complete the Challenger exercise if you haven’t done so.
 - [ ] Engage in module 3 of the MOOC and choose a topic for the peer evaluation (final task of module 3).
 - [ ] Here is an opportunity to practice your data curation/analysisskills by producing the First name/last name analysis in a computational document. I encourage you to use dplyr and ggplot for this analysis.
 
