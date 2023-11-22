@@ -31,5 +31,5 @@
 
 # Sixth week
 
-[X] Continue the hands-on, improve the experiment design and the analysis
+- [X] Continue the hands-on, improve the experiment design and the analysis
 
