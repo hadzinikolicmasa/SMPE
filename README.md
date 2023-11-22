@@ -25,6 +25,11 @@
 - [X] Engage in module 3 of the MOOC and choose a topic for the peer evaluation (final task of module 3).
 - [ ] Here is an opportunity to practice your data curation/analysisskills by producing the First name/last name analysis in a computational document. I encourage you to use dplyr and ggplot for this analysis.
 
-# Fourth week 
+# Fourth week & Fifth week
 
 /
+
+# Sixth week
+
+[X] Continue the hands-on, improve the experiment design and the analysis
+
