@@ -1,0 +1,90 @@
+
+## Notes taken during the research of Fitts’s law
+
+
+## Project overview
+
+Fitts described 1954 the relationship between the distance to a target, its width, and the time needed to acquire it [[Fitts, 1954](http://www2.psychology.uiowa.edu/faculty/mordkoff/InfoProc/pdfs/Fitts%201954.pdf)]. 
+To aquire a target, e.g., to move the mouse cursor and click on a file to select it, Fitts' law describes how the distance between the start point and the target (_A_: amplitude of the movement), and the size of the target (_W_: width of the target) impacts the index of difficulty of the task (_ID_) [[MacKenzie and Buxton, 1992](http://www.billbuxton.com/fitts92.html)]:
+
+> _ID_ = log2(_A_/_W_ + 1)
+
+The time (_MT_: movement time) needed for a user to acquire a target is linearly correlated to _ID_:
+
+> _MT_ = a + b × _ID_
+
+A large part of Human-Computer Interaction research since then builds on top of Fitts' law.
+
+This project aims at finding the values of the _a_ and _b_ parameters. This document contains my attempts to experimentally find _a_ and _b_ parameters.
+
+## Folder organization
+
+### data
+
+This folder contains both raw and processed experimental data that is returned from the experimental software. 
+
+Since the experiment is done three times on different occasion, each file name describes the circumstance under which the experiment is done.Each file name is named after the format: `YYYYMMDD_HHMM_Experiment_<data>` where experiment describes the circumstances and `<data>` is either RawData or MeanMT.
+
+The following files are provided:
+- 20231122_1541_computerRightHand_MeanMT
+- 20231122_1546_computerRightHand_RawData
+- 20231122_1555_computerLeftHand_MeanMT
+- 20231122_1600_computerLeftHand_RawData
+- 20231122_1614_phoneTwoHands_MeanMT
+- 20231122_1618_phoneTwoHands_RawData
+
+
+### analysis
+
+This folder contains my R markdown script used to analyze the data collected from the experiment. 
+
+
+## Report of the experiment (11.22.2023.)
+
+### Experiment explanation
+
+To perform the experiment, I used the implementation of a [pointing experiment from Ergonomics Web at Cornell University](http://ergo.human.cornell.edu/FittsLaw/FittsLaw.html). I had to fill the following parameters:
+
+- width = the width of the target
+- amplitude = the distance between targets
+- number of trials = number of repetitions for each combinations of width and amlitude
+
+I performed 3 experiments on different occasion and on each of them I used the same parameters:
+- width : 4, 8, 12
+- amplitude : 20, 50, 80
+- number of trials : 6
+
+
+### Data collected
+
+#### Experiment 1
+This experiment was performed on the computer with right hand and these are the following results:
+- errors = 0
+- _MT_ = 269.705 + 384.884log(A/W + 1) with R2 = 0.665
+
+#### Experiment 2
+This experiment was performed on the computer with left hand and these are the following results:
+- errors = 2
+- _MT_ = 916.483 + 247.244log(A/W + 1) with R2 = 0.342
+
+#### Experiment 3
+This experiment was performed on the mobile phone with both hands and these are the following results:
+- errors = 25
+- _MT_ = 381.455 + 30.567log(A/W + 1) with R2 = 0.224
+
+### Data analysis
+
+My data analysis is performed and commented in the [ExperimentAnalysis.Rmd file](./analysis/ExperimentAnalysis.Rmd) (R markdown file).
+
+### Conclusion
+
+From the data collected by 3 different experiment under different circumstances, I can conclude that there are many factors that can impact the accuracy and the speed. 
+
+1. Device - when it comes to devices and accuracy, better precision can be gained through the computer because we are using a pointer that can precisely be point to the target no matter what width we put. On the other hand, on mobile phones we are using our fingers which are much wider than the target and because of that it is harder to catch the target. When we are talking about speed, better speed can be gained on mobile phones even if we are using only one hand or both hands because the screen is smaller and we are not using any additional device to point on the target and therefore we can do it faster.
+
+2. Hand - When looking at the results of experiments done on the computer, we can see that there is not much difference on the side of precision because it is easy to point a pointer on the target but the speed can be decreased when we are not using our main hand (left hand in my experiment).
+
+3. Concentration - Concentration can also be one of the impacts. When I was doing an experiment on the phone, I was distracted because I was walking so I made a few error because of that reason too.
+
+These are just some factors that I noticed during the experiments but also we can discuss many more factors like fatigue, age of the experimenter,size of the target, noise in the environment and other distractions..
+
