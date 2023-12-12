@@ -1,0 +1,164 @@
+# Download raw data
+
+```{r}
+file = "dpt2021_csv.zip"
+if(!file.exists(file)){
+  download.file("https://www.insee.fr/fr/statistiques/fichier/2540004/dpt2021_csv.zip",
+	destfile=file)
+}
+unzip(file)
+```
+
+# Import the libraries and build the dataset
+
+```{r}
+library(tidyverse)
+library(dplyr)
+library(ggplot2)
+
+FirstNames <- read_delim("dpt2021.csv",delim=";")
+head(FirstNames)
+tail(FirstNames)
+```
+
+# Cleaning the data
+
+For better understanding, we will change the names of the columns from french to english.
+
+```{r}
+colnames(FirstNames) <- c("Sex", "Firstname", "Year", "Departement", "Number")
+head(FirstNames)
+```
+
+From the subset shown above, in certain rows we can notice values XX and XXXX for the attributes of age and department.
+
+```{r}
+count_cols <- sum(FirstNames$Year == "XXXX" | FirstNames$Departement == "XX")
+print(count_cols)
+```
+
+Also, as the number of such rows is not too big compared to our dataset and in order to avoid difficulties later in the analysis, we will drop those rows.
+
+```{r}
+FirstNames <- FirstNames %>%
+  filter(Year != "XXXX")
+FirstNames <- FirstNames %>%
+  filter(Departement != "XX")
+
+tail(FirstNames)
+```
+
+Since the Year column is charachter type, we will convert it to the numeric type so we can analyze data easier later.
+
+```{r}
+FirstNames$Year <- as.numeric(FirstNames$Year)
+head(FirstNames)
+```
+
+All of these following questions may need a preliminary analysis of the data, feel free to present answers and justifications in your own order and structure your report as it should be for a scientific report.
+
+Choose a firstname and analyse its frequency along time. Compare several firstnames frequency
+We will analyze the frequency along time of the firstname "PAOLA".
+
+```{r}
+paola <- subset(FirstNames, Firstname == 'PAOLA') %>%
+  select(Year, Number) %>%
+  group_by(Year) %>%
+  summarise(sum_number = sum(Number, na.rm = TRUE))
+
+plot <- ggplot(data = paola, aes(x = Year, y = sum_number)) +
+  geom_line(linetype = "dashed", color = "black") +
+  labs(title = "Frequency of name PAOLA along time",
+       x = "Year",
+       y = "Frequency") +
+  theme_minimal()
+print(plot)
+```
+
+From the graph above, we can see that until 60's, name PAOLA was not common at all. After that, the name increases rapidly and reaches its peak around the year of 1975. After the peak, there is a rapid decrease which is followed by gradual growth that starts in the begginging of the 80's.
+
+Now we will compare frequency of the following Firstnames : "KELLY", "PAOLA", and "ANITA".
+
+```{r}
+names_to_compare <- c("KELLY", "PAOLA", "ANITA")
+
+selected_name_data <- FirstNames %>%
+  filter(Firstname %in% names_to_compare) %>%
+  group_by(Firstname, Year) %>%
+  summarise(sum_number = sum(Number, na.rm = TRUE),.groups = 'drop') 
+
+plot <- ggplot(selected_name_data, aes(x = Year, y = sum_number, color = Firstname)) +
+  geom_line() +
+  labs(title = "Sum of Number for Selected First Names Over Time",
+       x = "Year",
+       y = "Sum of Number") +
+  theme_minimal()
+
+print(plot)
+```
+
+From the graph above, we can conclude that both ANITA and KELLY were popular in some period of time and their distrubution remainds of a normal distribution. ANITA reaches its peak around 60's while KELLY around the year of 2000. On the other side, PAOLA was never quite common compared to the others but we can see that its frequency slightly increases in 60's and again in 2000's.
+
+Establish by gender the most given firstname by year. Analyse the evolution of the most frequent firstname.
+First, we will drop rows with "PRENOMS_RARES" because it doesn't give us any adequate information about the frequency of the names and then we will count the total nummber of each name in every year. Then we will determinate the most common name in each year and the results can be shown in the tabels below.
+
+```{r}
+male_names_by_year <- FirstNames %>%
+  filter(Firstname != "_PRENOMS_RARES") %>%
+  filter(Sex == 1) %>%
+  group_by(Year, Firstname) %>%
+  summarise(sum_number = sum(Number), .groups = 'drop')
+
+most_given_male <- male_names_by_year %>%
+  group_by(Year) %>%
+  slice(which.max(sum_number))
+
+head(most_given_male)
+tail(most_given_male)
+```
+
+The graphical representation below can describe it more closely.
+
+```{r}
+most_given_male <- most_given_male %>%
+  filter(Year %% 5 == 0)
+
+ggplot(most_given_male, aes(x = factor(Year), y = sum_number, fill = Firstname)) +
+  geom_col(position = "dodge") +
+  labs(title = "Most common male names over years",
+       x = "Year",
+       y = "Frequency") +
+  theme(axis.text.x.bottom = element_text(angle = 90))
+```
+
+
+We will do the same for female names.
+
+```{r}
+female_names_by_year <- FirstNames %>%
+  filter(Firstname != "_PRENOMS_RARES") %>%
+  filter(Sex == 2 ) %>%
+  group_by(Year, Firstname) %>%
+  summarise(sum_number = sum(Number), .groups = 'drop')
+
+
+most_given_female <- female_names_by_year %>%
+  group_by(Year) %>%
+  slice(which.max(sum_number))
+
+head(most_given_female)
+tail(most_given_female)
+
+most_given_female <- most_given_female %>%
+  filter(Year %% 5 == 0)
+
+ggplot(most_given_female, aes(x = factor(Year), y = sum_number, fill = Firstname)) +
+  geom_col(position = "dodge") +
+  labs(title = "Most common female names over years",
+       x = "Year",
+       y = "Frequency") +
+  theme(axis.text.x.bottom = element_text(angle = 90))
+
+```
+
+Optional : Which department has a larger variety of names along time ? Is there some sort of geographical correlation with the data?
