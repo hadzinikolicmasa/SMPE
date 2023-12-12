@@ -20,7 +20,7 @@
 
 # Third week 
 
-- [ ] Use good naming and organization conventions in your repos.
+- [X] Use good naming and organization conventions in your repos.
 - [X] Complete the Challenger exercise if you haven’t done so.
 - [X] Engage in module 3 of the MOOC and choose a topic for the peer evaluation (final task of module 3).
 - [ ] Here is an opportunity to practice your data curation/analysisskills by producing the First name/last name analysis in a computational document. I encourage you to use dplyr and ggplot for this analysis.
@@ -33,3 +33,17 @@
 
 - [X] Continue the hands-on, improve the experiment design and the analysis
 
+# Seventh week
+
+- [ ] Fit a linear model for the data in https://github.com/alegrand/M2R-ParallelQuicksort
+
+# Eight week
+
+- [ ] Keep building intuition on linear model
+- [ ] Try to complete the peer-evaluation of the MOOC
+
+# Ninth week
+
+https://digitalscience.figshare.com/articles/report/The_State_of_Open_Data_2023/24428194
+https://www.ouvrirlascience.fr/passport-for-open-science-a-practical-guide-for-phd-students/
+- [ ] Read both documents for next week. Write down what you learnt (what appears useful, what is surprising, …) and your opinion on potential biases in both documents.
