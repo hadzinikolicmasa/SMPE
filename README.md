@@ -47,3 +47,9 @@
 https://digitalscience.figshare.com/articles/report/The_State_of_Open_Data_2023/24428194
 https://www.ouvrirlascience.fr/passport-for-open-science-a-practical-guide-for-phd-students/
 - [ ] Read both documents for next week. Write down what you learnt (what appears useful, what is surprising, …) and your opinion on potential biases in both documents.
+
+# Tenth week
+
+- [ ] Play with the DoE Shiny Application (https://arnaud-legrand.shinyapps.io/design_of_experiments/?user_a7710).
+All eleven variables are in [0,1]. The goal is to find the combination of variables where the output is the higher. This may require to identify which variables are significant, guessing a model for the system, etc.
+The website will record the combinations you try and you should write a small report on how you proceed. You’ll find your login in front of your name in the pad and you should replace user_a7710 by this login.
