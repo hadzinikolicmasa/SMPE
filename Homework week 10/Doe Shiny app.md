@@ -108,8 +108,8 @@ plt.show()
 
 
     
-![png](output_10_0.png)
-    
+![Matrix](data/output_10_0.png)
+ 
 
 
 From this correlation matrix, we can see that x9 has a strong negative correlation, meaning that when the values of x9 decrease, the value of y increase. Other than that, x1 and x4 show a weak positive correalation which may have some but not significant impact.
