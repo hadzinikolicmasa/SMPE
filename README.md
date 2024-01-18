@@ -46,7 +46,7 @@
 
 https://digitalscience.figshare.com/articles/report/The_State_of_Open_Data_2023/24428194
 https://www.ouvrirlascience.fr/passport-for-open-science-a-practical-guide-for-phd-students/
-- [ ] Read both documents for next week. Write down what you learnt (what appears useful, what is surprising, …) and your opinion on potential biases in both documents.
+- [X] Read both documents for next week. Write down what you learnt (what appears useful, what is surprising, …) and your opinion on potential biases in both documents.
 
 # Tenth week
 
