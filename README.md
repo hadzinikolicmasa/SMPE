@@ -57,4 +57,4 @@ The website will record the combinations you try and you should write a small re
 # Eleventh week
 
 - [ ] Keep playing with the DoE Shiny Application (https://arnaud-legrand.shinyapps.io/design_of_experiments/?user_a7710).
-- [ ] Pick a topic and prepare a short presentation.
+- [X] Pick a topic and prepare a short presentation.
