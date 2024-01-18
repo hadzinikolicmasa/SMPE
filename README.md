@@ -50,11 +50,11 @@ https://www.ouvrirlascience.fr/passport-for-open-science-a-practical-guide-for-p
 
 # Tenth week
 
-- [ ] Play with the DoE Shiny Application (https://arnaud-legrand.shinyapps.io/design_of_experiments/?user_a7710).
+- [X] Play with the DoE Shiny Application (https://arnaud-legrand.shinyapps.io/design_of_experiments/?user_a7710).
 All eleven variables are in [0,1]. The goal is to find the combination of variables where the output is the higher. This may require to identify which variables are significant, guessing a model for the system, etc.
 The website will record the combinations you try and you should write a small report on how you proceed. You’ll find your login in front of your name in the pad and you should replace user_a7710 by this login.
 
 # Eleventh week
 
-- [ ] Keep playing with the DoE Shiny Application (https://arnaud-legrand.shinyapps.io/design_of_experiments/?user_a7710).
+- [X] Keep playing with the DoE Shiny Application (https://arnaud-legrand.shinyapps.io/design_of_experiments/?user_a7710).
 - [X] Pick a topic and prepare a short presentation.
