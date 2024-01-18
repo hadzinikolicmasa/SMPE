@@ -1,6 +1,6 @@
 # Doe shiny app report
 
-I realized too late that I have to change username, so instead of doing the experiment under user_a7710, I did it under user_a7710. (I appologize)
+I realized too late that I have to change username, so instead of doing the experiment under user_h7100, I did it under user_a7710. (I appologize)
 
 First, as we can see, there are some input sets in the beggining that are same so I probably clicked on "run" many times because I didn't know what was I suppose to do.
 
