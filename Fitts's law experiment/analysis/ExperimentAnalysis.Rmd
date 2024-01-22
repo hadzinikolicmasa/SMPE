@@ -1,0 +1,76 @@
+---
+title: "ExperimentAnalysis"
+output: html_document
+date: "2023-11-22"
+---
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Loading libraries
+
+```{r loading ggplot2}
+
+if (!requireNamespace("gridExtra", quietly = TRUE)) {
+  install.packages("gridExtra")
+}
+
+library(gridExtra)
+library(ggplot2)
+```
+
+## Loading data
+
+```{r loading csv data into a dataframe}
+meanMTdf_experiment1 <- read.csv("../data/20231122_1541_computerRightHand_MeanMT.csv", header=T)
+rawdf_experiment1 <- read.csv("../data/20231122_1546_computerRightHand_RawData.csv", header=T)
+
+meanMTdf_experiment2 <- read.csv("../data/20231122_1555_computerLeftHand_MeanMT.csv", header=T)
+rawdf_experiment2 <- read.csv("../data/20231122_1600_computerLeftHand_RawData.csv", header=T)
+
+meanMTdf_experiment3 <- read.csv("../data/20231122_1614_phoneTwoHands_MeanMT.csv", header=T)
+rawdf_experiment3 <- read.csv("../data/20231122_1618_phoneTwoHands_RawData.csv", header=T)
+```
+
+## Plotting the data together with the linear regression
+
+```{r Plotting the raw data together with the linear regression}
+
+plot1 <- ggplot(meanMTdf_experiment1, aes(ID, MT)) +
+  geom_point() +
+  geom_smooth(method='lm') +
+  ggtitle("Experiment 1")
+
+plot2 <- ggplot(meanMTdf_experiment2, aes(ID, MT)) +
+  geom_point() +
+  geom_smooth(method='lm') +
+  ggtitle("Experiment 2")
+
+
+plot3 <- ggplot(meanMTdf_experiment3, aes(ID, MT)) +
+  geom_point() +
+  geom_smooth(method='lm') +
+  ggtitle("Experiment 3")
+
+grid.arrange(plot1, plot2, plot3, ncol = 3)
+
+
+```
+## Linear modelling
+
+```{r linear modeling}
+model1 <- lm(MT~ID, data = meanMTdf_experiment1)
+summary(model1)
+
+model1 <- lm(MT~ID, data = meanMTdf_experiment2)
+summary(model1)
+
+model1 <- lm(MT~ID, data = meanMTdf_experiment3)
+summary(model1)
+```
+We can see that the first experiment shows the best impact of ID on the movement time. Also, the R2 = 0.665 reported by my experiment and the R2 = 0.7735 are close.
+On the other hand, two other experiments show less connection between ID and movement time. Also R2 scores are different here and the ones reported by my experiment.
+
+From this results, I can conclude that Fitts' law only takes into account the width and distance of the target, but not other factors that can affect performance and In my experiment we can see that factors such as device choice, concentration and hand can significantly affect speed and accuracy. 

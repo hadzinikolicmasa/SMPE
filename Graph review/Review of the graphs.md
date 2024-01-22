@@ -2,8 +2,7 @@
 
 ## Graph 1 
 
-![1](https://github.com/hadzinikolicmasa/SMPE/assets/82235575/a46416fb-e980-4d62-a358-f774de73c585)
-
+![1](data/graph1.png)
 
 
 ### Data
@@ -59,7 +58,7 @@
 
 ## Graph 2 
 
-![222](https://github.com/hadzinikolicmasa/SMPE/assets/82235575/ca1768c3-7e6e-40ed-8139-89cfedfd6891)
+![2](data/graph2.png)
 
 
 
@@ -116,7 +115,7 @@
 
 ## Graph 3 
 
-![Screenshot 2023-10-19 004616](https://github.com/hadzinikolicmasa/SMPE/assets/82235575/b57bde0c-950f-4972-b500-f879f9d0790a)
+![3](data/graph3.png)
 
 
 
