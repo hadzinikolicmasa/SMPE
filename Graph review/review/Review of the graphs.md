@@ -2,7 +2,7 @@
 
 ## Graph 1 
 
-![1](./images/graph1.png)
+![1](../images/graph1.png)
 
 
 ### Data
@@ -58,7 +58,7 @@
 
 ## Graph 2 
 
-![2](./images/graph2.png)
+![2](../images/graph2.png)
 
 
 
@@ -115,7 +115,7 @@
 
 ## Graph 3 
 
-![3](./images/graph3.png)
+![3](../images/graph3.png)
 
 
 
