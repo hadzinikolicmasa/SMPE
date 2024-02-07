@@ -40,7 +40,7 @@
 # Eight week
 
 - [ ] Keep building intuition on linear model
-- [ ] Try to complete the peer-evaluation of the MOOC
+- [X] Try to complete the peer-evaluation of the MOOC
 
 # Ninth week
 
