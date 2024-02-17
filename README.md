@@ -35,11 +35,11 @@
 
 # Seventh week
 
-- [ ] Fit a linear model for the data in https://github.com/alegrand/M2R-ParallelQuicksort
+- [X] Fit a linear model for the data in https://github.com/alegrand/M2R-ParallelQuicksort
 
 # Eight week
 
-- [ ] Keep building intuition on linear model
+- [X] Keep building intuition on linear model
 - [X] Try to complete the peer-evaluation of the MOOC
 
 # Ninth week
