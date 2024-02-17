@@ -66,8 +66,8 @@
 - [X] The type of the graphic is adapted to the nature of data (curve, bars, pie, histogram, cloud...) ;
 - [X] Approximations/interpolation make sense ;
 - [X] Curves are defined by a sufficient number of points ;
-- [X] The building method of the curve is clear: interpolation (linear, polynomial, regression...) ;
-- [X] Confidence intervals are visualized (or given separately) ;
+- [ ] The building method of the curve is clear: interpolation (linear, polynomial, regression...) ;
+- [ ] Confidence intervals are visualized (or given separately) ;
 - [ ] Steps of histograms are adequate ;
 - [ ] Histograms visualize probabilities (from 0 to 1).
 
@@ -124,7 +124,7 @@
 - [X] Approximations/interpolation make sense ;
 - [X] Curves are defined by a sufficient number of points ;
 - [X] The building method of the curve is clear: interpolation (linear, polynomial, regression...) ;
-- [X] Confidence intervals are visualized (or given separately) ;
+- [ ] Confidence intervals are visualized (or given separately) ;
 - [ ] Steps of histograms are adequate ;
 - [ ] Histograms visualize probabilities (from 0 to 1).
 
