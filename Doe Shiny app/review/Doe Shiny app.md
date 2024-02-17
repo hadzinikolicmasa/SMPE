@@ -108,7 +108,7 @@ plt.show()
 
 
     
-![Matrix](data/output_10_0.png)
+![Matrix](../data/output_10_0.png)
  
 
 
